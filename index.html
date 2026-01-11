@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLZ Phone Center | Reparación de celulares</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header diagonal">
+    <div class="container">
+        <img src="/imagenes/PhoneCenter Logo.png" alt="VLZ Phone Center Logo" class="logo">
+
+        <h1 class="reveal">VLZ Phone Center</h1>
+        <p class="subtitle">Reparación profesional de smartphones</p>
+        <a href="https://www.instagram.com/vlz.phonecenter/" class="btn-whatsapp" target="_blank">
+            📸 Pagina de Instagram</a>
+        <a href="https://wa.me/5491149400068" class="btn-whatsapp" target="_blank">
+            📲 Escribinos por WhatsApp
+        </a>
+    </div>
+</header>
+
+<section class="section diagonal">
+    <div class="container">
+        <h2>Servicios</h2>
+        <ul class="services reveal">
+            <li>🔧 Cambio de módulo</li>
+            <li>🔋 Reemplazo de batería</li>
+            <li>🔓 Desbloqueo y formateo</li>
+            <li>💧 Reparación por humedad</li>
+            <li>📱 Compra y venta de equipos</li>
+        </ul>
+    </div>
+</section>
+
+<section class="section dark">
+    <div class="container">
+        <h2>¿Cómo trabajamos?</h2>
+        <ol class="steps reveal">
+            <li>Nos escribís por WhatsApp</li>
+            <li>Evaluamos tu equipo</li>
+            <li>Presupuesto sin cargo</li>
+            <li>Reparación rápida y segura</li>
+        </ol>
+    </div>
+</section>
+
+<section class="section diagonal">
+    <div class="container">
+        <h2>Trabajos realizados</h2>
+
+        <div class="videos reveal">
+            <video class="video_a" src="/imagenes/Moto G8 Play desarme EDIT.mp4" controls></video>
+            <video class="video_b" src="/imagenes/Short Moto g41.mp4" controls></video>
+        </div>
+    </div>
+</section>
+
+<section class="section dark">
+    <div class="container">
+        <h2>¿Por qué elegirnos?</h2>
+        <ul class="trust reveal">
+            <li>✔️ Experiencia real</li>
+            <li>✔️ Presupuesto sin compromiso</li>
+            <li>✔️ Atención personalizada</li>
+            <li>✔️ Equipos nuevos y reacondicionados</li>
+        </ul>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <p>📍 Atención en tu zona</p>
+        <p>⏰ Horarios flexibles</p>
+        <a href="https://wa.me/549XXXXXXXXXX" target="_blank">
+            Contactar por WhatsApp
+        </a>
+    </div>
+</footer>
+
+<a href="https://wa.me/5491149400068"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Contactar por WhatsApp">
+    💬
+</a>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+function revealOnScroll() {
+    for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const elementVisible = 120;
+
+        if (elementTop < windowHeight - elementVisible) {
+            reveals[i].classList.add("active");
+        }
+    }
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+</body>
+</html>
